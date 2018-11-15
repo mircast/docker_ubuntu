@@ -2,10 +2,12 @@ version: "3.5"
 services:
   ubuntu:
     build: .
-    image: ubuntu:0.1.7
+    image: ubuntu:0.1.9
     container_name: ubuntu
     stdin_open: true
     tty: true
+    cap_add:
+      - NET_ADMIN
     # entrypoint: /bin/bash
     ports:
       - "233:22"

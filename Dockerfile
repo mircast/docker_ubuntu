@@ -14,6 +14,7 @@ RUN apt-get install -y net-tools
 RUN apt-get install -y nano
 RUN apt-get install -y ssh
 RUN apt-get install -y iputils-ping 
+RUN apt-get install -y iproute2
 RUN useradd -ms /bin/bash ${user}
 RUN echo root:${password} | chpasswd
 RUN echo ${user}:${password} | chpasswd
