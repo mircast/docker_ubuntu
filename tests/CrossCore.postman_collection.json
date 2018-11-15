@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "86acc844-5ea4-4576-ba28-ba0be643a17f",
+		"name": "CrossCore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Local",
+			"item": [
+				{
+					"name": "BankWizardAbsolute",
+					"item": [
+						{
+							"name": "01 - Send BWA Request",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "hmac-signature",
+										"value": "da7001b77f3ca229840639d2d7bfedbfa0dfbfe5",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"userId\": \"321258bb-6666-0002-9517-1fafcb5a8000\",\n\t\"person\": {\n\t\t\"firstName\": \"Ashely\",\n\t\t\"surname\": \"Marma\",\n\t\t\"dateOfBirth\": \"1968-04-10\"\n\t},\n\t\"bankAccount\": {\n\t\t\"sortCode\": \"070116\",\n\t\t\"accountNumber\": \"00003036\",\n\t\t\"type\": \"Single\",\n\t\t\"openedDate\": \"2002-06-27\"\n\t},\n\t\"addresses\": [{\n\t\t\"buildingNumber\": \"1\",\n\t\t\"street\": \"Abbey Lodge\",\n\t\t\"postcode\": \"SE12 0ES\"\n\t}]\n}"
+								},
+								"url": {
+									"raw": "https://localhost:5001/api/BankWizardAbsolute",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"BankWizardAbsolute"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "02 - Get BWA result",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://localhost:5001/api/BankWizardAbsolute/00000000-0000-0000-0000-000000000000",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"BankWizardAbsolute",
+										"00000000-0000-0000-0000-000000000000"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "IdentityAuthenticate",
+					"item": [
+						{
+							"name": "01 - Send IdentAuth Request",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "hmac-signature",
+										"type": "text",
+										"value": "da7001b77f3ca229840639d2d7bfedbfa0dfbfe5"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \r\n   \"userId\":\"321258bb-6666-0002-9517-1fafcb5a8000\",\r\n   \"person\":{  \r\n      \"dateOfBirth\":\"2017-01-01\",\r\n      \"Gender\":\"M\",\r\n      \"placeOfBirth\":\"1968-04-10\",\r\n      \"mothersMaidenName\":\"SMITH\",\r\n      \"noOfDepentents\":9,\r\n      \"maritalStatus\":\"MAR\",\r\n      \"occupancyStatus\":\"Q\"\r\n   },\r\n   \"bankAccount\":{  \r\n      \"sortCode\":\"\",\r\n      \"accountNumber\":\"000000\",\r\n      \"type\":\"Single\",\r\n      \"openedDate\":\"2002-06-27\"\r\n   },\r\n   \"names\":[  \r\n      {  \r\n         \"type\":\"CURRENT\",\r\n         \"title\":\"MRS\",\r\n         \"firstName\":\"JENNY\",\r\n         \"surName\":\"Hipkiss\"\r\n      }\r\n   ],\r\n   \"addresses\":[  \r\n      {  \r\n         \"buildingNumber\":\"1\",\r\n         \"street\":\"Abbey Lodge\",\r\n         \"postcode\":\"SE4 0ES\",\r\n         \"addressType\":\"\",\r\n         \"postTown\":\"Glasgow\",\r\n         \"countryCode\":\"GBR\",\r\n         \"residentFrom\":\"2015-12-01\"\r\n\r\n      }\r\n   ],\r\n   \"productDetails\":{  \r\n      \"productType\":\"LOAN\",\r\n      \"productAmount\":{  \r\n         \"amount\":\"20\",\r\n         \"currencyCode\":\"GBP\"\r\n      }\r\n   }\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:53124/api/IdentityAuthenticate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "53124",
+									"path": [
+										"api",
+										"IdentityAuthenticate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "01 - Send IdentAuth Request Copy",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "hmac-signature",
+										"value": "da7001b77f3ca229840639d2d7bfedbfa0dfbfe5",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"userId\": \"321258bb-6666-0002-9517-1fafcb5a8000\",\n\t\"person\": {\n\t\t\"firstName\": \"Ashely\",\n\t\t\"surname\": \"Marma\",\n\t\t\"dateOfBirth\": \"1968-04-10\"\n\t},\n\t\"bankAccount\": {\n\t\t\"sortCode\": \"070116\",\n\t\t\"accountNumber\": \"00003036\",\n\t\t\"type\": \"Single\",\n\t\t\"openedDate\": \"2002-06-27\"\n\t},\n\t\"addresses\": [{\n\t\t\"buildingNumber\": \"1\",\n\t\t\"street\": \"Abbey Lodge\",\n\t\t\"postcode\": \"SE12 0ES\"\n\t}]\n}"
+								},
+								"url": {
+									"raw": "https://localhost:5001/api/BankWizardAbsolute",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"BankWizardAbsolute"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "02 - Get IdentAuth result",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://localhost:5001/api/BankWizardAbsolute/00000000-0000-0000-0000-000000000000",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"BankWizardAbsolute",
+										"00000000-0000-0000-0000-000000000000"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Dev (UAT)",
+			"item": [
+				{
+					"name": "01 - Send BWA Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "hmac-signature",
+								"type": "text",
+								"value": "da7001b77f3ca229840639d2d7bfedbfa0dfbfe5"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": \"321258bb-6666-0002-9517-1fafcb5a8000\",\n\t\"person\": {\n\t\t\"firstName\": \"Ashely\",\n\t\t\"surname\": \"Marma\",\n\t\t\"dateOfBirth\": \"1968-04-10\"\n\t},\n\t\"bankAccount\": {\n\t\t\"sortCode\": \"070116\",\n\t\t\"accountNumber\": \"00003036\",\n\t\t\"type\": \"Single\",\n\t\t\"openedDate\": \"2002-06-27\"\n\t},\n\t\"addresses\": [{\n\t\t\"buildingNumber\": \"1\",\n\t\t\"street\": \"Abbey Lodge\",\n\t\t\"postcode\": \"SE12 0ES\"\n\t}]\n}"
+						},
+						"url": {
+							"raw": "https://cl-crosscore-dev.azurewebsites.net/api/BankWizardAbsolute",
+							"protocol": "https",
+							"host": [
+								"cl-crosscore-dev",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"BankWizardAbsolute"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02 - Get BWA result Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://cl-crosscore-dev.azurewebsites.net/api/BankWizardAbsolute/00000000-0000-0000-0000-000000000000",
+							"protocol": "https",
+							"host": [
+								"cl-crosscore-dev",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"BankWizardAbsolute",
+								"00000000-0000-0000-0000-000000000000"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
