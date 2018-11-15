@@ -10,15 +10,14 @@ services:
     ports:
       - "233:22"
     networks:
-      eth0:
-        ipv4_address: 10.5.0.1
+      dockernet:
+        ipv4_address: 10.10.50.111
+
 networks:
   dockernet:
     external: true
   eth0:
     driver: bridge
     ipam:
-      config: 
-        - subnet: 10.5.0.0/8
-     
-       
+      config:
+        - subnet: 11.5.0.0/8
